@@ -1,0 +1,6 @@
+<h1>We've found a <%= @pet.species %> that we've called <%= @pet.name %></h1>
+<p>We found them at: <%= @pet.location %></p>
+<p>Found: <%= @pet.date_found %></p>
+<p><%= @pet.claimed? ? "#{@pet.name} has been claimed" : "#{@pet.name} has not been claimed" %></p>
+<%= link_to "☠️", pet_path(@pet), data: { turbo_method: "delete", turbo_confirm: "Are you sure you want to destroy poor #{@pet.name}?!"} %>
+<%= link_to "Back to Pets", pets_path %>

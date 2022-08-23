@@ -1,0 +1,9 @@
+<h1>Report a new lost pet</h1>
+
+<%= simple_form_for(@pet) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :species %>
+    <%= f.input :location %>
+    <%= f.input :date_found, html5: true %>
+    <%= f.submit %>
+<% end %>

@@ -1,0 +1,12 @@
+<h1>Update Report for <%= @pet.name %></h1>
+<h1>We've found a <%= @pet.species %> that we've called <%= @pet.name %></h1>
+<p>We found them at: <%= @pet.location %></p>
+<p>Found: <%= @pet.date_found %></p>
+<p><%= @pet.claimed? ? "#{@pet.name} has been claimed" : "#{@pet.name} has not been claimed" %></p>
+
+<%= simple_form_for(@pet) do |f| %>
+    <%= f.input :name %>
+    
+    <%= f.input :claimed %>
+    <%= f.submit %>
+<% end %>
